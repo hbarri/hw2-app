@@ -17,6 +17,10 @@ We were tasked to implement the MVC and Command design patterns in our applicati
 
 The Command design pattern was also a requirement to implement in this application. This design pattern was also not too difficult to implement. After creating the Command interface, it was simply a matter of creating each command with its necessary actions in its own class. All of these classes implemented a method to execute, undo, and redo the command. An instance of each command was created when its associated listener was triggered from its button click. As each command was instantiated, they were pushed into the queue in the singleton class CommandQ that was created to implement to undo and redo functions. The redo and undo functions were implemented by keeping two variables to keep up with the current index and the max index. I found this design pattern very important and worth implementing, as well. It took a little more time to set up as I felt it was a little more difficult to implement than the MVC was, however I still find it worthwhile. 
 
+The UML Diagram for this software is illustrated below. The MVC design pattern is illustrated in the top section of the diagram while the Command design pattern is illustrated below the MVC. You can see the model and controller illustrated in the diagram as well as the View interface (ViewObj).The analog (View2) and digital (View1) views then implement the View interface. The Command interface (from the Command design pattern) is then used as an implementation for the change second, change minute, change hour, change day, change month, and change year commands. Finally, the CommandQ is the singleton class meant to implement the undo/redo functions.
+
+![untitled diagram 3](https://user-images.githubusercontent.com/22596783/46703988-0bcac980-cbf7-11e8-9dad-34ba5f3f6fed.png)
+
 ### Deployment
 You can either launch this application through the source code or the APK.
 
